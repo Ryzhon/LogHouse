@@ -14,5 +14,3 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt install -y clang cmake ninja-build pkg-config libgtk-3-dev
 
 ENV DEBIAN_FRONTEND newt
-
-CMD [ "flutter", "run", "-d", "web-server", "--web-port=8888", "--web-hostname=0.0.0.0" ]
