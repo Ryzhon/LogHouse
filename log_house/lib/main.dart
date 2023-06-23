@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:log_house/api_service.dart';
-import 'package:log_house/file_uploder.dart';
+// import 'package:log_house/file_uploder.dart';
+import 'package:log_house/article_grid.dart';
 
 final apiService = ApiService();
 
@@ -11,25 +12,36 @@ void main() {
         appBar: AppBar(
           title: const Text("Welcome to our Loghouse"),
         ),
-        body: FileUploader(),
-            // Scrollbar(
-            //   child: ListView.separated(
-            //       itemCount: 10,
-            //       // separatorBuilder:(context, index) => Divider(),
-            //       separatorBuilder: (context, index) {
-            //         return Container(
-            //           height: 1,
-            //           color: Colors.blueGrey,
-            //           margin: const EdgeInsets.symmetric(horizontal: 16),
-            //         );
-            //       },
-            //       itemBuilder: (context, index) {
-            //         return ListTile(
-            //           title: Text('Item $index'),
-            //         );
-            //       }),
-            // ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              // FileUploader(),
+              const SizedBox(
+                height: 50,
+              ),
+              const ArticleGrid(),
+            ],
+          ),
         ),
+
+        // Scrollbar(
+        //   child: ListView.separated(
+        //       itemCount: 10,
+        //       // separatorBuilder:(context, index) => Divider(),
+        //       separatorBuilder: (context, index) {
+        //         return Container(
+        //           height: 1,
+        //           color: Colors.blueGrey,
+        //           margin: const EdgeInsets.symmetric(horizontal: 16),
+        //         );
+        //       },
+        //       itemBuilder: (context, index) {
+        //         return ListTile(
+        //           title: Text('Item $index'),
+        //         );
+        //       }),
+        // ),
       ),
+    ),
   );
 }
