@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:log_house/api_service.dart';
-// import 'package:log_house/file_uploder.dart';
 import 'package:log_house/article_grid.dart';
-
-final apiService = ApiService();
 
 void main() {
   runApp(
